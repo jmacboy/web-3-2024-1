@@ -16,4 +16,4 @@ class MateriaForm(forms.ModelForm):
 
     class Meta:
         model = Materia
-        fields = ("nombre", "creditos", "horario", "docente")
+        fields = ("nombre", "creditos", "horario", "docente", "foto_perfil")

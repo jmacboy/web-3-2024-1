@@ -15,7 +15,7 @@ def materia_list(request):
 
 def materia_create(request):
     if request.method == 'POST':
-        form = MateriaForm(request.POST)
+        form = MateriaForm(request.POST, request.FILES)
         if form.is_valid():
             form.save()
             return redirect("materia_list")
@@ -30,7 +30,7 @@ def materia_edit(request, id):
         return redirect("materia_list")
 
     if request.method == 'POST':
-        form = MateriaForm(request.POST, instance=materia)
+        form = MateriaForm(request.POST, request.FILES, instance=materia)
         if form.is_valid():
             form.save()
             return redirect("materia_list")

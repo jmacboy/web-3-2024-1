@@ -15,6 +15,11 @@ password_form_control = forms.PasswordInput(
         'class': 'form-control'
     }
 )
+email_form_control = forms.EmailInput(
+    attrs={
+        'class': 'form-control'
+    }
+)
 select_form_control = forms.Select(
     attrs={
         'class': 'form-select'

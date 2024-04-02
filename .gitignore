@@ -160,3 +160,4 @@ cython_debug/
 #.idea/
 djangoProject1/.idea/
 pruebaholadjango/pruebadjango/.idea/
+djangoProject1/static/images/

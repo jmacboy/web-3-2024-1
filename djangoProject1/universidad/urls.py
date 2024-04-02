@@ -18,5 +18,7 @@ urlpatterns = [
     path("inscripciones/create/", InscripcionCreateView.as_view(), name="inscripcion_create"),
     path("inscripciones/edit/<int:pk>/", InscripcionUpdateView.as_view(), name="inscripcion_edit"),
     path("inscripciones/delete/<int:pk>/", InscripcionDeleteView.as_view(), name="inscripcion_delete"),
-    path("login/", views.auth_login, name="auth_login"),
+    path("auth/login/", views.auth_login, name="auth_login"),
+    path("auth/logout/", views.auth_logout, name="auth_logout"),
+    path("auth/register/", views.auth_register, name="auth_register"),
 ]
