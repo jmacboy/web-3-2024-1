@@ -1,0 +1,46 @@
+{% extends "../base.html" %}
+{% block content %}
+    <div class="card">
+        <div class="card-body">
+
+            <h5 class="card-title">Formulario de Personas</h5>
+            <form method="post">
+                {% csrf_token %}
+                <div class="mb-2">
+                    <label for="nombres">Nombre:</label>
+                    <input type="text" id="nombres" class="form-control"
+                           name="nombres" {% if persona %}value="{{ persona.nombres }}"{% endif %}>
+                </div>
+                <div class="mb-2">
+                    <label for="apellidos">Apellido:</label>
+                    <input type="text" id="apellidos" name="apellidos" class="form-control"
+                           {% if persona %}value="{{ persona.apellidos }}"{% endif %}>
+                </div>
+                <div class="mb-2">
+                    <label for="edad">Edad:</label>
+                    <input type="number" id="edad" class="form-control" name="edad"
+                           {% if persona %}value="{{ persona.edad }}"{% endif %}>
+                </div>
+                <div class="mb-2">
+                    <label for="fecha_nacimiento">Fecha de nacimiento:</label>
+                    <input type="date" id="fecha_nacimiento" name="fecha_nacimiento" class="form-control"
+                           {% if persona %}value="{{ persona.fecha_nacimiento|date:"Y-m-d" }}"{% endif %}>
+                </div>
+                <div class="mb-2">
+                    <label for="ciudad">Ciudad</label>
+                    <input type="text" class="form-control" id="ciudad" name="ciudad"
+                           {% if persona %}value="{{ persona.ciudad }}"{% endif %}>
+                </div>
+                <div class="mb-2">
+                    <label>Género</label>
+                    <select name="genero" class="form-select">
+                        <option value="1" {% if persona and persona.genero == 1 %}selected{% endif %}>Masculino</option>
+                        <option value="0" {% if persona and persona.genero == 0 %}selected{% endif %}>Femenino</option>
+                        <option value="-1" {% if persona and persona.genero == -1 %}selected{% endif %}>Otro</option>
+                    </select>
+                </div>
+                <input type="submit" value="Submit" class="btn btn-primary"/>
+            </form>
+        </div>
+    </div>
+{% endblock %}

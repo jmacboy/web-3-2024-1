@@ -1,0 +1,44 @@
+{% extends "../base.html" %}
+{% block content %}
+    <div class="card">
+        <div class="card-body">
+            <h5 class="card-title">Lista de Personas</h5>
+            <table class="table">
+                <thead>
+                <tr>
+                    <th>Id</th>
+                    <th>Nombre</th>
+                    <th>Apellido</th>
+                    <th>Edad</th>
+                    <th>Fecha de Nacimiento</th>
+                    <th>Ciudad</th>
+                    <th>Género</th>
+                    <th></th>
+                    <th></th>
+                </tr>
+                </thead>
+                <tbody>
+                {% for persona in personas %}
+                    <tr>
+                        <td>{{ persona.id }}</td>
+                        <td>{{ persona.nombres }}</td>
+                        <td>{{ persona.apellidos }}</td>
+                        <td>{{ persona.edad }}</td>
+                        <td>{{ persona.fecha_nacimiento }}</td>
+                        <td>{{ persona.ciudad }}</td>
+                        <td>{{ persona.get_genero_display }}</td>
+                        <td><a class="btn btn-primary" href="{% url "persona_edit" persona.id %}">Editar</a></td>
+                        <td>
+                            <form method="post" action="{% url "persona_delete" persona.id %}"
+                                  onsubmit="return confirm('Está seguro que desea eliminar?')">
+                                {% csrf_token %}
+                                <button class="btn btn-danger">Eliminar</button>
+                            </form>
+                        </td>
+                    </tr>
+                {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </div>
+{% endblock %}

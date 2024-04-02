@@ -1,0 +1,40 @@
+{% extends "../base.html" %}
+{% block content %}
+    <div class="card">
+        <div class="card-body">
+            <h5 class="card-title">Lista de Materias</h5>
+            <table class="table">
+                <thead>
+                <tr>
+                    <th>Id</th>
+                    <th>Nombre</th>
+                    <th>Créditos</th>
+                    <th>Horario</th>
+                    <th>Docente</th>
+                    <th></th>
+                    <th></th>
+                </tr>
+                </thead>
+                <tbody>
+                {% for materia in materias %}
+                    <tr>
+                        <td>{{ materia.id }}</td>
+                        <td>{{ materia.nombre }}</td>
+                        <td>{{ materia.creditos }}</td>
+                        <td>{{ materia.horario }}</td>
+                        <td>{{ materia.docente }}</td>
+                        <td><a class="btn btn-primary" href="{% url "materia_edit" materia.id %}">Editar</a></td>
+                        <td>
+                            <form method="post" action="{% url "materia_delete" materia.id %}"
+                                  onsubmit="return confirm('Está seguro que desea eliminar?')">
+                                {% csrf_token %}
+                                <button class="btn btn-danger">Eliminar</button>
+                            </form>
+                        </td>
+                    </tr>
+                {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </div>
+{% endblock %}
