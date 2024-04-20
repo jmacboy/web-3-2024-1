@@ -1,9 +1,8 @@
+from django.contrib.auth.models import User
 from django.db import models
 
 
 class Cliente(models.Model):
-    nombres = models.CharField(max_length=50)
-    apellidos = models.CharField(max_length=50)
     edad = models.IntegerField()
     fecha_nacimiento = models.DateField()
     ciudad = models.CharField(max_length=100)
@@ -17,6 +16,8 @@ class Cliente(models.Model):
         (GENERO_OTRO, "Otro")
     )
     genero = models.IntegerField(choices=GENERO_CHOICES)
+
+    user = models.OneToOneField(User, on_delete=models.CASCADE)
 
     def __str__(self):
         return f"{self.nombres} {self.apellidos}"
