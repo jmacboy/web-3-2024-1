@@ -1,6 +1,8 @@
 from rest_framework import serializers, viewsets
+from rest_framework.decorators import action
 
 from pedidos.api import SimpleClienteSerializer, SimpleProductoSerializer
+from pedidos.api_key.organization_api_key import OrganizationAPIKeyAuthentication
 from pedidos.models import Pedido, Cliente, Producto
 
 
@@ -22,3 +24,5 @@ class PedidoSerializer(serializers.ModelSerializer):
 class PedidoViewSet(viewsets.ModelViewSet):
     queryset = Pedido.objects.all()
     serializer_class = PedidoSerializer
+    authentication_classes = (OrganizationAPIKeyAuthentication,)
+

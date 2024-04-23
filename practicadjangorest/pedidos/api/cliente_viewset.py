@@ -1,8 +1,10 @@
 from django.contrib.auth.models import User
 from rest_framework import serializers, viewsets, status
+from rest_framework.decorators import action
+from rest_framework.permissions import IsAuthenticated
 from rest_framework.response import Response
 
-from pedidos.api import SimpleUserSerializer
+from pedidos.api import SimpleUserSerializer, PedidoSerializer
 from pedidos.models import Cliente
 
 
@@ -17,6 +19,7 @@ class ClienteSerializer(serializers.ModelSerializer):
 class ClienteViewSet(viewsets.ModelViewSet):
     queryset = Cliente.objects.all()
     serializer_class = ClienteSerializer
+    permission_classes = [IsAuthenticated]
 
     def create(self, request, *args, **kwargs):
         serializer = self.get_serializer(data=request.data)
@@ -64,4 +67,14 @@ class ClienteViewSet(viewsets.ModelViewSet):
             # forcibly invalidate the prefetch cache on the instance.
             instance._prefetched_objects_cache = {}
 
+        return Response(serializer.data)
+
+    @action(
+        detail=True, methods=['get'], url_path='pedidos',
+        permission_classes=[IsAuthenticated]
+    )
+    def pedidos(self, request, pk=None):
+        cliente = self.get_object()
+        pedidos = cliente.pedidos.all()
+        serializer = PedidoSerializer(pedidos, many=True)
         return Response(serializer.data)

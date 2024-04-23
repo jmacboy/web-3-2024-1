@@ -37,6 +37,9 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     "corsheaders",
     'rest_framework',
+    'rest_framework.authtoken',
+    "rest_framework_simple_api_key",
+    'rest_framework_simplejwt',
     'pedidos'
 ]
 
@@ -124,3 +127,14 @@ CORS_ALLOWED_ORIGINS = [
     "http://localhost:5173",
     "http://127.0.0.1:5173",
 ]
+REST_FRAMEWORK = {
+    'DEFAULT_AUTHENTICATION_CLASSES': [
+        'rest_framework_simplejwt.authentication.JWTAuthentication',
+        'rest_framework.authentication.TokenAuthentication',
+        'rest_framework.authentication.BasicAuthentication',
+        'rest_framework.authentication.SessionAuthentication',
+    ]
+}
+SIMPLE_API_KEY = {
+    "FERNET_SECRET": "VgO3Ri3EMAd4ldBA96ctebJRBzhRl8GEmpvfoQHuP1U="
+}
