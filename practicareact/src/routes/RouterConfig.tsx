@@ -1,8 +1,9 @@
 import { createBrowserRouter } from "react-router-dom";
 import HomePage from "../pages/HomePage";
-import ClientList from "../pages/ClientList";
-import ClientForm from "../pages/ClientForm";
+import ClientList from "../pages/clients/ClientList";
+import ClientForm from "../pages/clients/ClientForm";
 import { Routes } from "./CONSTANTS";
+import LoginForm from "../pages/auth/LoginForm";
 
 export const routerConfig = createBrowserRouter([
     {
@@ -20,5 +21,9 @@ export const routerConfig = createBrowserRouter([
     {
       path: Routes.CLIENTS.EDIT,
       element: <ClientForm/>,
+    },
+    {
+      path: Routes.AUTH.LOGIN,
+      element: <LoginForm/>,
     },
   ]);

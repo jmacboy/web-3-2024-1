@@ -38,7 +38,6 @@ INSTALLED_APPS = [
     "corsheaders",
     'rest_framework',
     'rest_framework.authtoken',
-    "rest_framework_simple_api_key",
     'rest_framework_simplejwt',
     'pedidos'
 ]
@@ -127,6 +126,14 @@ CORS_ALLOWED_ORIGINS = [
     "http://localhost:5173",
     "http://127.0.0.1:5173",
 ]
+CORS_ALLOW_METHODS = (
+    "DELETE",
+    "GET",
+    "OPTIONS",
+    "PATCH",
+    "POST",
+    "PUT",
+)
 REST_FRAMEWORK = {
     'DEFAULT_AUTHENTICATION_CLASSES': [
         'rest_framework_simplejwt.authentication.JWTAuthentication',
@@ -135,6 +142,6 @@ REST_FRAMEWORK = {
         'rest_framework.authentication.SessionAuthentication',
     ]
 }
-SIMPLE_API_KEY = {
-    "FERNET_SECRET": "VgO3Ri3EMAd4ldBA96ctebJRBzhRl8GEmpvfoQHuP1U="
-}
+# SIMPLE_API_KEY = {
+#     "FERNET_SECRET": "VgO3Ri3EMAd4ldBA96ctebJRBzhRl8GEmpvfoQHuP1U="
+# }

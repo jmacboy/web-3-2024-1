@@ -1,16 +1,12 @@
-export interface Cliente {
+export interface ClienteRequest {
     id?:               number;
-    user:             User;
+    first_name:       string;
+    last_name:        string;
+    username:         string;
+    password?:        string;
     edad:             string;
     fecha_nacimiento: string;
     ciudad:           string;
     telefono:         string;
     genero:           string;
-}
-
-export interface User {
-    id:         number;
-    username:   string;
-    first_name: string;
-    last_name:  string;
 }

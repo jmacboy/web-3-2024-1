@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
-import { ClientService } from "../services/ClientService";
+import { ClientService } from "../../services/ClientService";
 import { useNavigate, useParams } from "react-router-dom";
-import { Routes } from "../routes/CONSTANTS";
+import { Routes } from "../../routes/CONSTANTS";
 
 const ClientForm = () => {
     const navigate = useNavigate();
@@ -12,6 +12,8 @@ const ClientForm = () => {
     const [ciudad, setCiudad] = useState('')
     const [telefono, setTelefono] = useState('')
     const [genero, setGenero] = useState('')
+    const [username, setUsername] = useState('')
+    const [password, setPassword] = useState('')
     const { id } = useParams();
     useEffect(() => {
         if (!id) { return; }
@@ -21,13 +23,14 @@ const ClientForm = () => {
         if (!id) return;
         ClientService.get(parseInt(id)).then((response) => {
             console.log(response);
-            setNombre(response.nombres);
-            setApellido(response.apellidos);
+            setNombre(response.user.first_name);
+            setApellido(response.user.last_name);
             setEdad(response.edad);
             setFechaNacimiento(response.fecha_nacimiento);
             setCiudad(response.ciudad);
             setTelefono(response.telefono);
             setGenero(response.genero);
+            setUsername(response.user.username);
         }).catch((error) => {
             console.log(error);
         });
@@ -46,13 +49,14 @@ const ClientForm = () => {
         }
         ClientService.update({
             id: parseInt(id),
-            nombres: nombre,
-            apellidos: apellido,
+            first_name: nombre,
+            last_name: apellido,
             edad: edad,
             fecha_nacimiento: fechaNacimiento,
             ciudad: ciudad,
             telefono: telefono,
-            genero: genero
+            genero: genero,
+            username: username
         }).then((response) => {
             console.log(response);
             navigate(Routes.CLIENTS.LIST);
@@ -63,13 +67,15 @@ const ClientForm = () => {
 
     const createClient = () => {
         ClientService.create({
-            nombres: nombre,
-            apellidos: apellido,
+            first_name: nombre,
+            last_name: apellido,
             edad: edad,
             fecha_nacimiento: fechaNacimiento,
             ciudad: ciudad,
             telefono: telefono,
-            genero: genero
+            genero: genero,
+            username: username,
+            password: password
         }).then((response) => {
             console.log(response);
 
@@ -78,6 +84,18 @@ const ClientForm = () => {
         });
     }
     return (<form onSubmit={onClienteFormSubmit}>
+        <div>
+            <label>Email</label>
+            <input
+                value={username}
+                onChange={(e) => setUsername(e.target.value)} />
+        </div>
+        {!id && <div>
+            <label>Contraseña</label>
+            <input value={password}
+                onChange={(e) => setPassword(e.target.value)} />
+        </div>
+        }
         <div>
             <label>Nombre</label>
             <input
@@ -89,6 +107,7 @@ const ClientForm = () => {
             <input value={apellido}
                 onChange={(e) => setApellido(e.target.value)} />
         </div>
+
         <div>
             <label>Edad</label>
             <input value={edad} type="number" onChange={(e) => setEdad(e.target.value)} />

@@ -1,8 +1,8 @@
 import { useEffect, useState } from "react";
-import { ClientService } from "../services/ClientService";
-import { Cliente } from "../models/Cliente";
+import { ClientService } from "../../services/ClientService";
+import { Cliente } from "../../models/Cliente";
 import { Link } from "react-router-dom";
-import { Routes } from "../routes/CONSTANTS";
+import { Routes } from "../../routes/CONSTANTS";
 
 const ClientList = () => {
     const [clientList, setClientList] = useState<Cliente[]>([])
@@ -41,19 +41,21 @@ const ClientList = () => {
                     <th>Ciudad</th>
                     <th>Teléfono</th>
                     <th>Género</th>
+                    <th>Email</th>
                 </tr>
             </thead>
             <tbody>
                 {clientList.map((client: Cliente) =>
                     <tr key={"client" + client.id}>
                         <td>{client.id}</td>
-                        <td>{client.nombres}</td>
-                        <td>{client.apellidos}</td>
+                        <td>{client.user.first_name}</td>
+                        <td>{client.user.last_name}</td>
                         <td>{client.edad}</td>
                         <td>{client.fecha_nacimiento}</td>
                         <td>{client.ciudad}</td>
                         <td>{client.telefono}</td>
                         <td>{client.genero}</td>
+                        <td>{client.user.username}</td>
                         <td>
                             <Link to={Routes.CLIENTS.EDIT_PARAM(client.id)}
                                 className="btn btn-primary">Editar</Link>

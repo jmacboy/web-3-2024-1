@@ -1,6 +1,6 @@
 import './App.css'
-import ClientForm from './pages/ClientForm'
-import ClientList from './pages/ClientList'
+import ClientForm from './pages/clients/ClientForm'
+import ClientList from './pages/clients/ClientList'
 
 interface AppProps {
   title: string
