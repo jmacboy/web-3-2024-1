@@ -2,6 +2,8 @@ import { useEffect, useState } from "react";
 import { ClientService } from "../../services/ClientService";
 import { useNavigate, useParams } from "react-router-dom";
 import { Routes } from "../../routes/CONSTANTS";
+import NavMenu from "../../components/NavMenu";
+import { Button, Card, CardBody, CardHeader, Input, Option, Select, Typography } from "@material-tailwind/react";
 
 const ClientForm = () => {
     const navigate = useNavigate();
@@ -83,61 +85,69 @@ const ClientForm = () => {
             console.log(error);
         });
     }
-    return (<form onSubmit={onClienteFormSubmit}>
-        <div>
-            <label>Email</label>
-            <input
-                value={username}
-                onChange={(e) => setUsername(e.target.value)} />
-        </div>
-        {!id && <div>
-            <label>Contraseña</label>
-            <input value={password}
-                onChange={(e) => setPassword(e.target.value)} />
-        </div>
-        }
-        <div>
-            <label>Nombre</label>
-            <input
-                value={nombre}
-                onChange={(e) => setNombre(e.target.value)} />
-        </div>
-        <div>
-            <label>Apellido</label>
-            <input value={apellido}
-                onChange={(e) => setApellido(e.target.value)} />
-        </div>
+    return (
+        <>
+            <NavMenu />
+            <div className="flex justify-center w-screen">
+                <Card className="w-[80%] mt-5">
+                    <CardBody>
+                        <CardHeader color="transparent" shadow={false} >
+                            <Typography variant="h4" color="blue-gray">
+                                Formulario de Cliente
+                            </Typography>
+                        </CardHeader>
 
-        <div>
-            <label>Edad</label>
-            <input value={edad} type="number" onChange={(e) => setEdad(e.target.value)} />
-        </div>
-        <div>
-            <label>Fecha de Nacimiento</label>
-            <input value={fechaNacimiento} type="date" onChange={(e) => setFechaNacimiento(e.target.value)} />
-        </div>
+                        <form onSubmit={onClienteFormSubmit}>
 
-        <div>
-            <label>Ciudad</label>
-            <input value={ciudad} onChange={(e) => setCiudad(e.target.value)} />
-        </div>
-        <div>
-            <label>Teléfono</label>
-            <input value={telefono} onChange={(e) => setTelefono(e.target.value)} />
-        </div>
-        <div>
-            <label>Género</label>
-            <select value={genero} onChange={(e) => setGenero(e.target.value)}>
-                <option value="1">Masculino</option>
-                <option value="0">Femenino</option>
-                <option value="-1">Indefinido</option>
-            </select>
-        </div>
-        <div>
-            <button>Guardar</button>
-        </div>
+                            <div className="mt-3">
+                                <Input label="Email"
+                                    value={username}
+                                    onChange={(e) => setUsername(e.target.value)} />
+                            </div>
+                            {!id && <div className="mt-3">
 
-    </form>);
+                                <Input label="Contraseña" value={password}
+                                    onChange={(e) => setPassword(e.target.value)} />
+                            </div>
+                            }
+                            <div className="mt-3">
+                                <Input label="Nombre"
+                                    value={nombre}
+                                    onChange={(e) => setNombre(e.target.value)} />
+                            </div>
+                            <div className="mt-3">
+                                <Input label="Apellido" value={apellido}
+                                    onChange={(e) => setApellido(e.target.value)} />
+                            </div>
+                            <div className="mt-3">
+                                <Input label="Edad" value={edad} type="number" onChange={(e) => setEdad(e.target.value)} />
+                            </div>
+                            <div className="mt-3">
+                                <Input label="Fecha de Nacimiento" value={fechaNacimiento} type="date" onChange={(e) => setFechaNacimiento(e.target.value)} />
+                            </div>
+                            <div className="mt-3">
+                                <Input label="Ciudad" value={ciudad} onChange={(e) => setCiudad(e.target.value)} />
+                            </div>
+                            <div className="mt-3">
+                                <Input label="Teléfono" value={telefono} onChange={(e) => setTelefono(e.target.value)} />
+                            </div>
+                            <div className="mt-3">
+                                <Select variant="outlined" label="Género" value={genero} onChange={(value) => setGenero(value ?? "")}>
+                                    <Option value="1">Masculino</Option>
+                                    <Option value="0">Femenino</Option>
+                                    <Option value="-1">Indefinido</Option>
+                                </Select>
+                            </div>
+                            <div className="mt-3">
+                                <Button>Guardar</Button>
+                            </div>
+
+                        </form>
+                    </CardBody>
+                </Card>
+            </div>
+        </>
+    );
 }
 
 export default ClientForm;
