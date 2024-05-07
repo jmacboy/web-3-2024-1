@@ -3,19 +3,24 @@ import { AuthService } from "../../services/AuthService";
 import { useNavigate } from "react-router-dom";
 import { Routes } from "../../routes/CONSTANTS";
 import { Button, Card, CardBody, CardHeader, Input, Typography } from "@material-tailwind/react";
+import useUserInfo from "../../hooks/useUserInfo";
 
 const LoginForm = () => {
     const navigate = useNavigate();
+
     const [email, setEmail] = useState('')
     const [password, setPassword] = useState('')
+    const { getUserInfo } = useUserInfo();
     const doLogin = () => {
         AuthService.login({ username: email, password: password })
             .then(response => {
                 localStorage.setItem('access_token', response.access);
                 localStorage.setItem('refresh_token', response.refresh);
+                getUserInfo();
                 navigate(Routes.CLIENTS.LIST);
             })
     }
+
     const onLoginFormSubmit = (e: React.FormEvent) => {
         e.preventDefault();
         doLogin();

@@ -54,6 +54,8 @@ const ClientList = () => {
                                     <th>Teléfono</th>
                                     <th>Género</th>
                                     <th>Email</th>
+                                    <th></th>
+                                    <th></th>
                                 </tr>
                             </thead>
                             <tbody>

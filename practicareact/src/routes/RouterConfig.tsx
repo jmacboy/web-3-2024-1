@@ -4,6 +4,8 @@ import ClientList from "../pages/clients/ClientList";
 import ClientForm from "../pages/clients/ClientForm";
 import { Routes } from "./CONSTANTS";
 import LoginForm from "../pages/auth/LoginForm";
+import ProductList from "../pages/products/ProductList";
+import ProductForm from "../pages/products/ProductForm";
 
 export const routerConfig = createBrowserRouter([
     {
@@ -21,6 +23,18 @@ export const routerConfig = createBrowserRouter([
     {
       path: Routes.CLIENTS.EDIT,
       element: <ClientForm/>,
+    },
+    {
+      path: Routes.PRODUCTS.LIST,
+      element: <ProductList/>,
+    },
+    {
+      path: Routes.PRODUCTS.CREATE,
+      element: <ProductForm/>,
+    },
+    {
+      path: Routes.PRODUCTS.EDIT,
+      element: <ProductForm/>,
     },
     {
       path: Routes.AUTH.LOGIN,

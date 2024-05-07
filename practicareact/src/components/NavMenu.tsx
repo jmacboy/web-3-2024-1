@@ -1,9 +1,13 @@
 import { Button, Menu, MenuHandler, MenuItem, MenuList, Navbar, Typography } from "@material-tailwind/react";
 import { Link, useNavigate } from "react-router-dom";
 import { Routes } from '../routes/CONSTANTS';
+import useUserInfo from "../hooks/useUserInfo";
 
 const NavMenu = () => {
     const navigate = useNavigate();
+    const { firstName, lastName } = useUserInfo();
+
+
     const navList = (
         <ul className="mt-2 mb-4 flex flex-col gap-2 lg:mb-0 lg:mt-0 lg:flex-row lg:items-center lg:gap-6">
             <Typography
@@ -20,6 +24,28 @@ const NavMenu = () => {
                         <MenuItem><Link to={Routes.CLIENTS.CREATE}>Crear Cliente</Link></MenuItem>
                     </MenuList>
                 </Menu>
+            </Typography>
+            <Typography
+                as="li"
+                variant="small"
+                className="p-1 font-normal"
+            >
+                <Menu>
+                    <MenuHandler>
+                        <Typography className="cursor-pointer">Productos</Typography>
+                    </MenuHandler>
+                    <MenuList>
+                        <MenuItem><Link to={Routes.PRODUCTS.LIST}>Lista de Productos</Link></MenuItem>
+                        <MenuItem><Link to={Routes.PRODUCTS.CREATE}>Crear Producto</Link></MenuItem>
+                    </MenuList>
+                </Menu>
+            </Typography>
+            <Typography
+                as="li"
+                variant="small"
+                className="p-1 font-normal"
+            >
+                {firstName} {lastName}
             </Typography>
         </ul>
     );

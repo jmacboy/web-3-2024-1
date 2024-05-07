@@ -80,6 +80,7 @@ const ClientForm = () => {
             password: password
         }).then((response) => {
             console.log(response);
+            navigate(Routes.CLIENTS.LIST);
 
         }).catch((error) => {
             console.log(error);
@@ -139,7 +140,7 @@ const ClientForm = () => {
                                 </Select>
                             </div>
                             <div className="mt-3">
-                                <Button>Guardar</Button>
+                                <Button type="submit">Guardar</Button>
                             </div>
 
                         </form>

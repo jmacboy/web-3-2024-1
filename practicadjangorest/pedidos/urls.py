@@ -3,12 +3,13 @@ from rest_framework import routers
 from rest_framework.authtoken import views
 from rest_framework_simplejwt.views import TokenObtainPairView, TokenRefreshView, TokenVerifyView
 
-from pedidos.api import ClienteViewSet, PedidoViewSet, ProductoViewSet
+from pedidos.api import ClienteViewSet, PedidoViewSet, ProductoViewSet, UserViewSet
 
 router = routers.DefaultRouter()
 router.register(r'clientes', ClienteViewSet)
 router.register(r'pedidos', PedidoViewSet)
 router.register(r'productos', ProductoViewSet)
+router.register(r'usuarios', UserViewSet)
 
 urlpatterns = [
     path('', include(router.urls)),
