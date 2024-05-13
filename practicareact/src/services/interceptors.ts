@@ -1,24 +1,13 @@
 import axios from "axios";
 
 const api = axios.create({
-    baseURL: 'http://127.0.0.1:8000/api/',
+    baseURL: 'http://127.0.0.1:3000/webproxy/',
+    withCredentials: true,
     timeout: 1000,
     headers: {
         'Content-Type': 'application/json',
-    }
-})
-api.interceptors.request.use(
-    (config) => {
-        const token = localStorage.getItem('access_token');
-        if (token) {
-            config.headers['Authorization'] = `Bearer ${token}`;
-        }
-        return config;
     },
-    (error) => {
-        return Promise.reject(error);
-    }
-);
+})
 api.interceptors.response.use(
     (response) => response,
     async (error) => {
@@ -33,7 +22,7 @@ api.interceptors.response.use(
                     }
                     return Promise.reject(error)
                 }
-                response = await axios.post('http://127.0.0.1:8000/api/token/refresh/', {
+                response = await axios.post('http://127.0.0.1:3000/webproxy/token/refresh/', {
                     refresh: localStorage.getItem('refresh_token')
                 })
             } catch (authError) {

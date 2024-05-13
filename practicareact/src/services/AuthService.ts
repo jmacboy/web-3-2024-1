@@ -7,14 +7,18 @@ import api from "./interceptors";
 export const AuthService = {
     login: (loginRequest: LoginRequest) => {
         return new Promise<AuthResponse>((resolve, reject) => {
-            axios.post('http://localhost:8000/api/token/', loginRequest)
+            axios.post('http://127.0.0.1:3000/auth/login/', loginRequest,{
+                withCredentials: true,
+            })
             .then(response => resolve(response.data))
             .catch(error => reject(error))
         });
     },
     getUserInfo: () => {
         return new Promise<UserInfoResponse>((resolve, reject) => {
-            api.get('http://localhost:8000/api/usuarios/me')
+            api.get('usuarios/me/',{
+                withCredentials: true,
+            })
             .then(response => resolve(response.data))
             .catch(error => reject(error))
         });

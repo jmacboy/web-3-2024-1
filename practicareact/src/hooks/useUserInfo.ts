@@ -18,12 +18,12 @@ const useUserInfo = () => {
     }
     useEffect(() => {
         if (username === '') {
-            if (localStorage.getItem('access_token') === null) {
-                navigate(Routes.AUTH.LOGIN);
-                return;
-            } else {
+            // if (localStorage.getItem('access_token') === null) {
+            //     navigate(Routes.AUTH.LOGIN);
+            //     return;
+            // } else {
                 getUserInfo();
-            }
+            // }
         }
     }, [username])
 

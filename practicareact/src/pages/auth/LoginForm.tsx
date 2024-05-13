@@ -14,8 +14,6 @@ const LoginForm = () => {
     const doLogin = () => {
         AuthService.login({ username: email, password: password })
             .then(response => {
-                localStorage.setItem('access_token', response.access);
-                localStorage.setItem('refresh_token', response.refresh);
                 getUserInfo();
                 navigate(Routes.CLIENTS.LIST);
             })
