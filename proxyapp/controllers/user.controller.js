@@ -1,5 +1,5 @@
 const { postLogin } = require("../services/auth.service");
-const { createSessionCookie } = require("../utilities/cookie.utilities");
+const { createSessionCookie, removeSessionCookie } = require("../utilities/cookie.utilities");
 
 exports.login = (req, res) => {
     const username = req.body.username;
@@ -19,4 +19,10 @@ exports.login = (req, res) => {
                 message: "Invalid credentials",
             });
         });
+}
+exports.logout = (req, res) => {
+    removeSessionCookie(res);
+    res.send({
+        message: "Logout successful",
+    });
 }

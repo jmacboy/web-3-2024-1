@@ -2,12 +2,21 @@ import { Button, Menu, MenuHandler, MenuItem, MenuList, Navbar, Typography } fro
 import { Link, useNavigate } from "react-router-dom";
 import { Routes } from '../routes/CONSTANTS';
 import useUserInfo from "../hooks/useUserInfo";
+import { AuthService } from "../services/AuthService";
+import { useAppDispatch } from "../hooks";
+import { logout } from "../slices/userSlice";
 
 const NavMenu = () => {
     const navigate = useNavigate();
+    const dispatch = useAppDispatch();
     const { firstName, lastName } = useUserInfo();
 
-
+    const doLogout = () => {
+        AuthService.logout().then(() => {
+            dispatch(logout());
+            navigate(Routes.AUTH.LOGIN);
+        });
+    }
     const navList = (
         <ul className="mt-2 mb-4 flex flex-col gap-2 lg:mb-0 lg:mt-0 lg:flex-row lg:items-center lg:gap-6">
             <Typography
@@ -65,11 +74,7 @@ const NavMenu = () => {
                     <Button
                         variant="gradient"
                         size="sm"
-                        onClick={() => {
-                            localStorage.removeItem('access_token');
-                            localStorage.removeItem('refresh_token');
-                            navigate(Routes.AUTH.LOGIN);
-                        }}
+                        onClick={doLogout}
                         className="hidden lg:inline-block"
                     >
                         <span>Cerrar sesión</span>

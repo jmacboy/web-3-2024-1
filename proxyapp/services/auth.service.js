@@ -20,6 +20,7 @@ const postLogin = (username, password) => {
             });
     });
 }
+
 module.exports = {
-    postLogin,
+    postLogin
 };

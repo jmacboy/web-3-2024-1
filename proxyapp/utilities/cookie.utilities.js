@@ -14,4 +14,8 @@ const createSessionCookie = (res, token, refresh) => {
         });
     }
 }
-module.exports = { createSessionCookie };
+const removeSessionCookie = (res) => {
+    res.clearCookie('session');
+    res.clearCookie('refresh');
+}
+module.exports = { createSessionCookie, removeSessionCookie };

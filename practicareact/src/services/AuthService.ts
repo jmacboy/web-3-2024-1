@@ -14,6 +14,15 @@ export const AuthService = {
             .catch(error => reject(error))
         });
     },
+    logout: () => {
+        return new Promise<void>((resolve, reject) => {
+            axios.post('http://127.0.0.1:3000/auth/logout/',{},{
+                withCredentials: true,
+            })
+            .then(response => resolve(response.data))
+            .catch(error => reject(error))
+        });
+    },
     getUserInfo: () => {
         return new Promise<UserInfoResponse>((resolve, reject) => {
             api.get('usuarios/me/',{
