@@ -5,8 +5,6 @@ const postLogin = (username, password) => {
         axios.post("http://127.0.0.1:8000/api/token/", {
             username,
             password,
-        }, {
-            withCredentials: true,
         })
             .then((response) => {
                 // console.log(response);
@@ -20,7 +18,24 @@ const postLogin = (username, password) => {
             });
     });
 }
-
+const postRefresh = (refreshToken) =>{
+    return new Promise((resolve, reject) => {
+        axios.post("http://127.0.0.1:8000/api/token/refresh/", {
+            refresh: refreshToken
+        })
+            .then((response) => {
+                // console.log(response);
+                resolve(response.data);
+            })
+            .catch((error) => {
+                if (error.response.status !== 401) {
+                    console.log(error);
+                }
+                reject(error);
+            });
+    });
+}
 module.exports = {
-    postLogin
+    postLogin,
+    postRefresh
 };
