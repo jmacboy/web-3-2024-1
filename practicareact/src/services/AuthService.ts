@@ -7,7 +7,7 @@ import api from "./interceptors";
 export const AuthService = {
     login: (loginRequest: LoginRequest) => {
         return new Promise<AuthResponse>((resolve, reject) => {
-            axios.post('http://127.0.0.1:3000/auth/login/', loginRequest,{
+            axios.post('http://127.0.0.1:8000/api/token/', loginRequest,{
                 withCredentials: true,
             })
             .then(response => resolve(response.data))
@@ -16,7 +16,7 @@ export const AuthService = {
     },
     logout: () => {
         return new Promise<void>((resolve, reject) => {
-            axios.post('http://127.0.0.1:3000/auth/logout/',{},{
+            axios.post('http://127.0.0.1:8000/auth/logout/',{},{
                 withCredentials: true,
             })
             .then(response => resolve(response.data))

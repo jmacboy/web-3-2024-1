@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const api = axios.create({
-    baseURL: 'http://127.0.0.1:3000/webproxy/',
+    baseURL: 'http://127.0.0.1:8000/api/',
     withCredentials: true,
     timeout: 1000,
     headers: {
@@ -14,7 +14,7 @@ api.interceptors.response.use(
         console.log('error', error);
         if (error.response?.status === 401) {
             try {
-                await axios.post('http://127.0.0.1:3000/auth/refresh/', {},
+                await axios.post('http://127.0.0.1:8000/api/token/refresh/', {},
                     { withCredentials: true }
                 )
             } catch (authError) {
