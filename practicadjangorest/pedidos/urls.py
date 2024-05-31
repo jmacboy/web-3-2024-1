@@ -3,10 +3,11 @@ from rest_framework import routers
 from rest_framework.authtoken import views
 from rest_framework_simplejwt.views import TokenObtainPairView, TokenRefreshView, TokenVerifyView
 
-from pedidos.api import ClienteViewSet, PedidoViewSet, ProductoViewSet, UserViewSet
+from pedidos.api import ClienteViewSet, PedidoViewSet, ProductoViewSet, UserViewSet, ChoferViewSet
 
 router = routers.DefaultRouter()
 router.register(r'clientes', ClienteViewSet)
+router.register(r'choferes', ChoferViewSet)
 router.register(r'pedidos', PedidoViewSet)
 router.register(r'productos', ProductoViewSet)
 router.register(r'usuarios', UserViewSet)
