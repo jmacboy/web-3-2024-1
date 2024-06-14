@@ -5,6 +5,9 @@ from rest_framework.response import Response
 
 from pedidos.api import SimpleUserSerializer
 from pedidos.models import Chofer
+from pedidos.permissions import PermissionPolicyMixin
+from pedidos.permissions.is_admin import IsAdmin
+from pedidos.permissions.is_driver import IsDriver
 
 
 class ChoferSerializer(serializers.ModelSerializer):
@@ -15,10 +18,18 @@ class ChoferSerializer(serializers.ModelSerializer):
         fields = '__all__'
 
 
-class ChoferViewSet(viewsets.ModelViewSet):
+class ChoferViewSet(PermissionPolicyMixin, viewsets.ModelViewSet):
     queryset = Chofer.objects.all()
     serializer_class = ChoferSerializer
     permission_classes = [IsAuthenticated]
+    permission_classes_per_method = {
+        'create': [IsAuthenticated, IsAdmin],
+        'update': [IsAuthenticated, IsDriver],
+        'partial_update': [IsAuthenticated, IsDriver],
+        'destroy': [IsAuthenticated, IsAdmin],
+        'list': [],
+        'retrieve': []
+    }
 
     def create(self, request, *args, **kwargs):
         serializer = self.get_serializer(data=request.data)

@@ -1,7 +1,7 @@
-from django.contrib.auth.models import User
+from django.contrib.auth.models import User, Group
 from rest_framework import serializers, viewsets, status
 from rest_framework.decorators import action
-from rest_framework.permissions import IsAuthenticated
+from rest_framework.permissions import IsAuthenticated, DjangoModelPermissions
 from rest_framework.response import Response
 
 from pedidos.api import SimpleUserSerializer, PedidoSerializer
@@ -19,7 +19,7 @@ class ClienteSerializer(serializers.ModelSerializer):
 class ClienteViewSet(viewsets.ModelViewSet):
     queryset = Cliente.objects.all()
     serializer_class = ClienteSerializer
-    permission_classes = [IsAuthenticated]
+    permission_classes = [IsAuthenticated, DjangoModelPermissions]
     search_fields = ['user__first_name', 'user__last_name', 'ciudad']
     ordering_fields = ['user__first_name', 'user__last_name', 'ciudad']
 
@@ -37,6 +37,8 @@ class ClienteViewSet(viewsets.ModelViewSet):
             first_name=first_name,
             last_name=last_name
         )
+        client_group = Group.objects.get(name='client')
+        user.groups.add(client_group)
 
         serializer.save(user=user)
 
