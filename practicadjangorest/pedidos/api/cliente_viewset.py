@@ -20,6 +20,8 @@ class ClienteViewSet(viewsets.ModelViewSet):
     queryset = Cliente.objects.all()
     serializer_class = ClienteSerializer
     permission_classes = [IsAuthenticated]
+    search_fields = ['user__first_name', 'user__last_name', 'ciudad']
+    ordering_fields = ['user__first_name', 'user__last_name', 'ciudad']
 
     def create(self, request, *args, **kwargs):
         serializer = self.get_serializer(data=request.data)

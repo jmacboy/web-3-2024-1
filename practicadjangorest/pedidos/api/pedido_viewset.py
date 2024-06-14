@@ -27,6 +27,8 @@ class PedidoSerializer(serializers.ModelSerializer):
 class PedidoViewSet(viewsets.ModelViewSet):
     queryset = Pedido.objects.all()
     serializer_class = PedidoSerializer
+    filterset_fields = ['estado', 'pagado']
+    search_fields = ['cliente__user__full_name']
 
     @action(detail=True, methods=['post'], url_path='aprobar', url_name='aprobar')
     def aprobar(self, request, pk=None):
