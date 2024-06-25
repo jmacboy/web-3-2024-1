@@ -137,7 +137,8 @@ CORS_ALLOW_METHODS = (
 )
 REST_FRAMEWORK = {
     'DEFAULT_AUTHENTICATION_CLASSES': [
-        'rest_framework_simplejwt.authentication.JWTAuthentication',
+        'pedidos.auth.CustomJWTAuth',
+        # 'rest_framework_simplejwt.authentication.JWTAuthentication',
         'rest_framework.authentication.TokenAuthentication',
         'rest_framework.authentication.BasicAuthentication',
         'rest_framework.authentication.SessionAuthentication',
@@ -157,6 +158,7 @@ REST_FRAMEWORK = {
 SIMPLE_JWT = {
     "ACCESS_TOKEN_LIFETIME": timedelta(minutes=30),
     "REFRESH_TOKEN_LIFETIME": timedelta(days=1),
+    "USER_ID_CLAIM": "user_id",
 }
 # SIMPLE_API_KEY = {
 #     "FERNET_SECRET": "VgO3Ri3EMAd4ldBA96ctebJRBzhRl8GEmpvfoQHuP1U="

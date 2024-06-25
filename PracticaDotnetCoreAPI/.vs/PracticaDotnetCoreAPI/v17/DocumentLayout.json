@@ -7,8 +7,16 @@
       "RelativeMoniker": "D:0:0:{ED7C2E5F-0D72-4AD0-84D4-27B07799749A}|PracticaDotnetCoreAPI\\PracticaDotnetCoreAPI.csproj|solutionrelative:practicadotnetcoreapi\\controllers\\personascontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{ED7C2E5F-0D72-4AD0-84D4-27B07799749A}|PracticaDotnetCoreAPI\\PracticaDotnetCoreAPI.csproj|d:\\web3\\web-3-2024-1\\practicadotnetcoreapi\\practicadotnetcoreapi\\data\\practicadotnetcoreapicontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{ED7C2E5F-0D72-4AD0-84D4-27B07799749A}|PracticaDotnetCoreAPI\\PracticaDotnetCoreAPI.csproj|solutionrelative:practicadotnetcoreapi\\data\\practicadotnetcoreapicontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{ED7C2E5F-0D72-4AD0-84D4-27B07799749A}|PracticaDotnetCoreAPI\\PracticaDotnetCoreAPI.csproj|d:\\web3\\web-3-2024-1\\practicadotnetcoreapi\\practicadotnetcoreapi\\models\\personadto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{ED7C2E5F-0D72-4AD0-84D4-27B07799749A}|PracticaDotnetCoreAPI\\PracticaDotnetCoreAPI.csproj|solutionrelative:practicadotnetcoreapi\\models\\personadto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{ED7C2E5F-0D72-4AD0-84D4-27B07799749A}|PracticaDotnetCoreAPI\\PracticaDotnetCoreAPI.csproj|d:\\web3\\web-3-2024-1\\practicadotnetcoreapi\\practicadotnetcoreapi\\models\\persona.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{ED7C2E5F-0D72-4AD0-84D4-27B07799749A}|PracticaDotnetCoreAPI\\PracticaDotnetCoreAPI.csproj|solutionrelative:practicadotnetcoreapi\\models\\persona.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{ED7C2E5F-0D72-4AD0-84D4-27B07799749A}|PracticaDotnetCoreAPI\\PracticaDotnetCoreAPI.csproj|d:\\web3\\web-3-2024-1\\practicadotnetcoreapi\\practicadotnetcoreapi\\models\\mascota.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -19,20 +27,12 @@
       "RelativeMoniker": "D:0:0:{ED7C2E5F-0D72-4AD0-84D4-27B07799749A}|PracticaDotnetCoreAPI\\PracticaDotnetCoreAPI.csproj|solutionrelative:practicadotnetcoreapi\\models\\mascotadto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{ED7C2E5F-0D72-4AD0-84D4-27B07799749A}|PracticaDotnetCoreAPI\\PracticaDotnetCoreAPI.csproj|d:\\web3\\web-3-2024-1\\practicadotnetcoreapi\\practicadotnetcoreapi\\models\\persona.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{ED7C2E5F-0D72-4AD0-84D4-27B07799749A}|PracticaDotnetCoreAPI\\PracticaDotnetCoreAPI.csproj|solutionrelative:practicadotnetcoreapi\\models\\persona.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{ED7C2E5F-0D72-4AD0-84D4-27B07799749A}|PracticaDotnetCoreAPI\\PracticaDotnetCoreAPI.csproj|d:\\web3\\web-3-2024-1\\practicadotnetcoreapi\\practicadotnetcoreapi\\controllers\\mascotascontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{ED7C2E5F-0D72-4AD0-84D4-27B07799749A}|PracticaDotnetCoreAPI\\PracticaDotnetCoreAPI.csproj|solutionrelative:practicadotnetcoreapi\\controllers\\mascotascontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{ED7C2E5F-0D72-4AD0-84D4-27B07799749A}|PracticaDotnetCoreAPI\\PracticaDotnetCoreAPI.csproj|d:\\web3\\web-3-2024-1\\practicadotnetcoreapi\\practicadotnetcoreapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{ED7C2E5F-0D72-4AD0-84D4-27B07799749A}|PracticaDotnetCoreAPI\\PracticaDotnetCoreAPI.csproj|solutionrelative:practicadotnetcoreapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{ED7C2E5F-0D72-4AD0-84D4-27B07799749A}|PracticaDotnetCoreAPI\\PracticaDotnetCoreAPI.csproj|d:\\web3\\web-3-2024-1\\practicadotnetcoreapi\\practicadotnetcoreapi\\data\\practicadotnetcoreapicontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{ED7C2E5F-0D72-4AD0-84D4-27B07799749A}|PracticaDotnetCoreAPI\\PracticaDotnetCoreAPI.csproj|solutionrelative:practicadotnetcoreapi\\data\\practicadotnetcoreapicontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{ED7C2E5F-0D72-4AD0-84D4-27B07799749A}|PracticaDotnetCoreAPI\\PracticaDotnetCoreAPI.csproj|d:\\web3\\web-3-2024-1\\practicadotnetcoreapi\\practicadotnetcoreapi\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
@@ -66,41 +66,24 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 8,
+          "SelectedChildIndex": 6,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "MascotaDTO.cs",
-              "DocumentMoniker": "D:\\web3\\web-3-2024-1\\PracticaDotnetCoreAPI\\PracticaDotnetCoreAPI\\Models\\MascotaDTO.cs",
-              "RelativeDocumentMoniker": "PracticaDotnetCoreAPI\\Models\\MascotaDTO.cs",
-              "ToolTip": "D:\\web3\\web-3-2024-1\\PracticaDotnetCoreAPI\\PracticaDotnetCoreAPI\\Models\\MascotaDTO.cs",
-              "RelativeToolTip": "PracticaDotnetCoreAPI\\Models\\MascotaDTO.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAYAAAAtAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-18T18:46:12.184Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "PersonaDTO.cs",
               "DocumentMoniker": "D:\\web3\\web-3-2024-1\\PracticaDotnetCoreAPI\\PracticaDotnetCoreAPI\\Models\\PersonaDTO.cs",
               "RelativeDocumentMoniker": "PracticaDotnetCoreAPI\\Models\\PersonaDTO.cs",
               "ToolTip": "D:\\web3\\web-3-2024-1\\PracticaDotnetCoreAPI\\PracticaDotnetCoreAPI\\Models\\PersonaDTO.cs",
               "RelativeToolTip": "PracticaDotnetCoreAPI\\Models\\PersonaDTO.cs",
-              "ViewState": "AQIAAAMAAAAAAAAAAAAwwAoAAAAaAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAuwAoAAAAlAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-06-18T18:45:50.712Z",
               "EditorCaption": ""
             },
             {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{cce594b6-0c39-4442-ba28-10c64ac7e89f}"
-            },
-            {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 6,
               "Title": "MascotasController.cs",
               "DocumentMoniker": "D:\\web3\\web-3-2024-1\\PracticaDotnetCoreAPI\\PracticaDotnetCoreAPI\\Controllers\\MascotasController.cs",
               "RelativeDocumentMoniker": "PracticaDotnetCoreAPI\\Controllers\\MascotasController.cs",
@@ -113,20 +96,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 1,
               "Title": "PracticaDotnetCoreAPIContext.cs",
               "DocumentMoniker": "D:\\web3\\web-3-2024-1\\PracticaDotnetCoreAPI\\PracticaDotnetCoreAPI\\Data\\PracticaDotnetCoreAPIContext.cs",
               "RelativeDocumentMoniker": "PracticaDotnetCoreAPI\\Data\\PracticaDotnetCoreAPIContext.cs",
               "ToolTip": "D:\\web3\\web-3-2024-1\\PracticaDotnetCoreAPI\\PracticaDotnetCoreAPI\\Data\\PracticaDotnetCoreAPIContext.cs",
               "RelativeToolTip": "PracticaDotnetCoreAPI\\Data\\PracticaDotnetCoreAPIContext.cs",
-              "ViewState": "AQIAABEAAAAAAAAAAAA3wBUAAAAAAAAA",
+              "ViewState": "AQIAAAMAAAAAAAAAAAAAAAsAAABNAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-06-18T18:21:41.469Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 4,
               "Title": "Mascota.cs",
               "DocumentMoniker": "D:\\web3\\web-3-2024-1\\PracticaDotnetCoreAPI\\PracticaDotnetCoreAPI\\Models\\Mascota.cs",
               "RelativeDocumentMoniker": "PracticaDotnetCoreAPI\\Models\\Mascota.cs",
@@ -139,7 +122,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 7,
               "Title": "Program.cs",
               "DocumentMoniker": "D:\\web3\\web-3-2024-1\\PracticaDotnetCoreAPI\\PracticaDotnetCoreAPI\\Program.cs",
               "RelativeDocumentMoniker": "PracticaDotnetCoreAPI\\Program.cs",
@@ -171,23 +154,40 @@
               "RelativeDocumentMoniker": "PracticaDotnetCoreAPI\\Controllers\\PersonasController.cs",
               "ToolTip": "D:\\web3\\web-3-2024-1\\PracticaDotnetCoreAPI\\PracticaDotnetCoreAPI\\Controllers\\PersonasController.cs",
               "RelativeToolTip": "PracticaDotnetCoreAPI\\Controllers\\PersonasController.cs",
-              "ViewState": "AQIAABsAAAAAAAAAAAAYwDYAAAAmAAAA",
+              "ViewState": "AQIAACYAAAAAAAAAAAAgwCwAAAArAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-06-18T17:46:40.229Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 5,
+              "Title": "MascotaDTO.cs",
+              "DocumentMoniker": "D:\\web3\\web-3-2024-1\\PracticaDotnetCoreAPI\\PracticaDotnetCoreAPI\\Models\\MascotaDTO.cs",
+              "RelativeDocumentMoniker": "PracticaDotnetCoreAPI\\Models\\MascotaDTO.cs",
+              "ToolTip": "D:\\web3\\web-3-2024-1\\PracticaDotnetCoreAPI\\PracticaDotnetCoreAPI\\Models\\MascotaDTO.cs",
+              "RelativeToolTip": "PracticaDotnetCoreAPI\\Models\\MascotaDTO.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAYAAAAtAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-18T18:46:12.184Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
               "Title": "Persona.cs",
               "DocumentMoniker": "D:\\web3\\web-3-2024-1\\PracticaDotnetCoreAPI\\PracticaDotnetCoreAPI\\Models\\Persona.cs",
               "RelativeDocumentMoniker": "PracticaDotnetCoreAPI\\Models\\Persona.cs",
               "ToolTip": "D:\\web3\\web-3-2024-1\\PracticaDotnetCoreAPI\\PracticaDotnetCoreAPI\\Models\\Persona.cs",
               "RelativeToolTip": "PracticaDotnetCoreAPI\\Models\\Persona.cs",
-              "ViewState": "AQIAAAIAAAAAAAAAAAAxwAQAAAACAAAA",
+              "ViewState": "AQIAAAIAAAAAAAAAAAAxwAoAAAAtAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-06-18T17:43:48.351Z",
               "EditorCaption": ""
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{cce594b6-0c39-4442-ba28-10c64ac7e89f}"
             },
             {
               "$type": "Document",

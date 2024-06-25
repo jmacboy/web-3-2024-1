@@ -24,6 +24,7 @@ class ClienteViewSet(viewsets.ModelViewSet):
     ordering_fields = ['user__first_name', 'user__last_name', 'ciudad']
 
     def create(self, request, *args, **kwargs):
+        print(request.user)
         serializer = self.get_serializer(data=request.data)
         serializer.is_valid(raise_exception=True)
         username = request.data.get('username')
