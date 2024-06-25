@@ -79,7 +79,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"nombres\": \"Juancito\"\r\n}",
+							"raw": "{\r\n    \"first_name\": \"Pepe\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -87,7 +87,7 @@
 							}
 						},
 						"url": {
-							"raw": "http://127.0.0.1:8000/api/clientes/2/",
+							"raw": "http://127.0.0.1:8000/api/clientes/10/",
 							"protocol": "http",
 							"host": [
 								"127",
@@ -99,7 +99,7 @@
 							"path": [
 								"api",
 								"clientes",
-								"2",
+								"10",
 								""
 							]
 						}
@@ -220,6 +220,255 @@
 						}
 					},
 					"response": []
+				}
+			]
+		},
+		{
+			"name": "chofer",
+			"item": [
+				{
+					"name": "get lista choferes",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzE0MTU1NzQ0LCJpYXQiOjE3MTQxNTU0NDQsImp0aSI6IjM4MzU3ZGQ2YTM4NzQwZjM5YmZhNDE0NWM4NTdlMzgwIiwidXNlcl9pZCI6Mn0.wX6MC4gAwxRr2IkN4JfE8bQh1n80iNnK69KTG4GCx_g",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/chofere/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"chofere",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "insertar chofer",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"first_name\": \"Juan\",\r\n    \"last_name\": \"Chofer\",\r\n    \"username\": \"testchofer@test.com\",\r\n    \"password\": \"123456\",\r\n    \"ciudad\": \"Scz\",\r\n    \"telefono\": \"123456\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/choferes/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"choferes",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "actualizar cliente patch",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nombres\": \"Juancito\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/clientes/2/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"clientes",
+								"2",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "actualizar cliente put",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"first_name\": \"Pepito\",\r\n    \"last_name\": \"Perez\",\r\n    \"username\": \"test2@test.com\",\r\n    \"edad\": 12,\r\n    \"fecha_nacimiento\": \"2000-01-01\",\r\n    \"ciudad\": \"Scz\",\r\n    \"telefono\": \"123456\",\r\n    \"genero\": 1\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/clientes/2/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"clientes",
+								"2",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get choferby id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/choferes/1/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"choferes",
+								"1",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get pedidos by cliente",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Basic dGVzdEB0ZXN0LmNvbToxMjM0NTY=",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/clientes/1/pedidos",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"clientes",
+								"1",
+								"pedidos"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete chofer",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/choferes/2/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"choferes",
+								"2",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"auth": {
+				"type": "bearer",
+				"bearer": [
+					{
+						"key": "token",
+						"value": "{{token}}",
+						"type": "string"
+					}
+				]
+			},
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"type": "text/javascript",
+						"packages": {},
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"packages": {},
+						"exec": [
+							""
+						]
+					}
 				}
 			]
 		},
@@ -407,18 +656,333 @@
 			"name": "pedido",
 			"item": [
 				{
+					"name": "pasos pedido",
+					"item": [
+						{
+							"name": "1.- insertar pedido",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"total\": \"20\",\r\n    \"cliente_id\": 1,\r\n    \"productos_ids\": [1, 2]\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://127.0.0.1:8000/api/pedidos/",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"pedidos",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "2.- aprobado por restaurante",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"url": {
+									"raw": "http://127.0.0.1:8000/api/pedidos/10/aprobar/",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"pedidos",
+										"10",
+										"aprobar",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "3.- inicia preparación",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"url": {
+									"raw": "http://127.0.0.1:8000/api/pedidos/12/preparar/",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"pedidos",
+										"12",
+										"preparar",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "4.- Asignar chofer",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"url": {
+									"raw": "http://127.0.0.1:8000/api/pedidos/10/asignar-chofer/",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"pedidos",
+										"10",
+										"asignar-chofer",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "5.- Chofer llegó al restaurane",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"url": {
+									"raw": "http://127.0.0.1:8000/api/pedidos/10/chofer-restaurante/",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"pedidos",
+										"10",
+										"chofer-restaurante",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "6.- Chofer está en camino",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"url": {
+									"raw": "http://127.0.0.1:8000/api/pedidos/10/chofer-en-camino/",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"pedidos",
+										"10",
+										"chofer-en-camino",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "6.5.- Pagar el pedido",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"url": {
+									"raw": "http://127.0.0.1:8000/api/pedidos/10/entregado/",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"pedidos",
+										"10",
+										"entregado",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "7.- chofer entrega pedido Copy",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"url": {
+									"raw": "http://127.0.0.1:8000/api/pedidos/10/entregado/",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"pedidos",
+										"10",
+										"entregado",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "-1 - Cliente Cancela pedido",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"razon_cancelacion\": \"No tengo plata en mi tarjeta\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://127.0.0.1:8000/api/pedidos/10/cancelar-cliente/",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"pedidos",
+										"10",
+										"cancelar-cliente",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "-2 - Restaurante Cancela pedido",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"razon_cancelacion\": \"Faltó queso para su empanada\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://127.0.0.1:8000/api/pedidos/12/cancelar-restaurante/",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"pedidos",
+										"12",
+										"cancelar-restaurante",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "-3 - Anular pedido",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"url": {
+									"raw": "http://127.0.0.1:8000/api/pedidos/14/anular/",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"pedidos",
+										"14",
+										"anular",
+										""
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
 					"name": "get lista pedidos",
 					"request": {
 						"method": "GET",
 						"header": [
 							{
 								"key": "Authorization",
-								"value": "Api-Key gAAAAABmKACgRtY7TiYe4YuhV-d27zkiqCCt55AZ0ZkIZNSIKMB0NJGEHbMuIsF3KrR0gciEEhlLnK-o4vdWO34GmhwdLlFOPN2PluzKMrLjBa074tF6FlXaVK8CtwLKyxMcGAj_Qw7B",
-								"type": "text"
+								"value": "Api-Key gAAAAABmKACgRtY7TiYe4YuhV-d27zkiqCCt55AZ0ZkIZNSIKMB0NJGEHbMuIsF3KrR0gciEEhlLnK-o4vdWO34GmhwdLlFOPN2PluzKMrLjBa074tF6FlXaVK8CtwLKyxMcGAj_Qw7B"
 							}
 						],
 						"url": {
-							"raw": "http://127.0.0.1:8000/api/pedidos/",
+							"raw": "http://127.0.0.1:8000/api/pedidos/?estado=ANULAR",
 							"protocol": "http",
 							"host": [
 								"127",
@@ -431,52 +995,25 @@
 								"api",
 								"pedidos",
 								""
-							]
-						}
-					},
-					"response": []
-				},
-				{
-					"name": "insertar pedido",
-					"request": {
-						"method": "POST",
-						"header": [],
-						"body": {
-							"mode": "raw",
-							"raw": "{\r\n    \"total\": \"20\",\r\n    \"cliente_id\": 1,\r\n    \"productos_ids\": [1, 2]\r\n}",
-							"options": {
-								"raw": {
-									"language": "json"
+							],
+							"query": [
+								{
+									"key": "estado",
+									"value": "ANULAR"
 								}
-							}
-						},
-						"url": {
-							"raw": "http://127.0.0.1:8000/api/pedidos/",
-							"protocol": "http",
-							"host": [
-								"127",
-								"0",
-								"0",
-								"1"
-							],
-							"port": "8000",
-							"path": [
-								"api",
-								"pedidos",
-								""
 							]
 						}
 					},
 					"response": []
 				},
 				{
-					"name": "actualizar cliente patch",
+					"name": "actualizar pedidos patch",
 					"request": {
 						"method": "PATCH",
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"nombres\": \"Juancito\"\r\n}",
+							"raw": "{\r\n    \"estado\": \"CREADO\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -484,7 +1021,7 @@
 							}
 						},
 						"url": {
-							"raw": "http://127.0.0.1:8000/api/clientes/2/",
+							"raw": "http://127.0.0.1:8000/api/pedidos/10/",
 							"protocol": "http",
 							"host": [
 								"127",
@@ -495,8 +1032,8 @@
 							"port": "8000",
 							"path": [
 								"api",
-								"clientes",
-								"2",
+								"pedidos",
+								"10",
 								""
 							]
 						}
@@ -678,12 +1215,28 @@
 			"item": [
 				{
 					"name": "obtener token",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"var jsonData = pm.response.json();\r",
+									"if (!jsonData.access) {\r",
+									"    return;\r",
+									"}\r",
+									"pm.collectionVariables.set(\"token\", jsonData.access);"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
 					"request": {
 						"method": "POST",
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"username\": \"test2@test.com\",\r\n    \"password\": \"123456\"\r\n}",
+							"raw": "{\r\n    \"username\": \"admin\",\r\n    \"password\": \"123456\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -713,10 +1266,16 @@
 					"name": "refresh token",
 					"request": {
 						"method": "POST",
-						"header": [],
+						"header": [
+							{
+								"key": "Set-Cookie",
+								"value": "refresh=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoicmVmcmVzaCIsImV4cCI6MTcxNjA1NTQ1MCwiaWF0IjoxNzE1OTY5MDUwLCJqdGkiOiIxZjM3MzIwOTFhZjg0MTcxYTBhYzc5YWNlNzE1YTYxZSIsInVzZXJfaWQiOjJ9.-UrIUokU-IyFLm5DGvJjrqfUrb_rVmzNYJ3HRw51Gnk; expires=0:30:00; HttpOnly; Path=/; SameSite=None; Secure",
+								"disabled": true
+							}
+						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"refresh\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoicmVmcmVzaCIsImV4cCI6MTcxMzk4NDU1NywiaWF0IjoxNzEzODk4MTU3LCJqdGkiOiJmZDIxMDYyNDJkOWE0ZGY4YmMzY2VkOTJkMGY2MzM5MyIsInVzZXJfaWQiOjJ9.md3s3udSge78l7JcZBC63PMKWdnCtibSJ3noZsQlzOk\"\r\n}",
+							"raw": "",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -744,6 +1303,122 @@
 					"response": []
 				}
 			]
+		},
+		{
+			"name": "proxy login",
+			"item": [
+				{
+					"name": "login to proxy",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\": \"test2@test.com\",\r\n    \"password\": \"123456\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:3000/auth/login/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "3000",
+							"path": [
+								"auth",
+								"login",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "usuario",
+			"item": [
+				{
+					"name": "agregar usuario",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/usuarios/add-user/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"usuarios",
+								"add-user",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"auth": {
+		"type": "bearer",
+		"bearer": [
+			{
+				"key": "token",
+				"value": "{{token}}",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "token",
+			"value": ""
 		}
 	]
 }
